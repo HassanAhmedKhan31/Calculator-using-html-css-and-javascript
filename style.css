@@ -19,6 +19,7 @@ body {
 }
 
 .calculator {
+  margin-top: 20px;
   background: white;
   border-radius: 16px;
   padding: 2rem;
@@ -27,6 +28,19 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.calculator1 {
+  margin-top: 20px;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450%;
   gap: 1rem;
 }
 
@@ -54,21 +68,23 @@ body {
 }
 
 .input {
-  height: 60px;
+  height: 50px;
   background: #f5f5f5;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-size: 1.8rem;
   text-align: right;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   white-space: nowrap;
   color: #333;
+  
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 20px;
 }
 
 .numbers {
@@ -91,6 +107,7 @@ button {
   background: #e0e0e0;
   cursor: pointer;
   transition: all 0.3s;
+
 }
 
 button:hover {
@@ -145,13 +162,17 @@ body.dark {
   background: #1e1e2f;
 }
 
-body.dark .calculator {
+body.dark .calculator  {
   background: #2c2f40;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(207, 26, 26, 0.1);
+}
+.calculator1 {
+  background: #2c2f40;
+  box-shadow: 0 0 10px rgba(207, 26, 26, 0.1);
 }
 
 body.dark .input {
-  background: #1f1f2d;
+  background: #3a3d5a;
   color: #f1f1f1;
 }
 
@@ -207,13 +228,19 @@ body.dark #scrollToTop {
 }
 
 /* Responsive */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 380px) {
   .calculator {
-    padding: 1rem;
+    padding: 10p;
+    gap: 0.8rem;
+  }
+    .calculator1 {
+    padding: 10p;
     gap: 0.8rem;
   }
 
+
   .extras {
+  
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -231,11 +258,12 @@ body.dark #scrollToTop {
   }
 
   button {
+    
     padding: 0.8rem;
     font-size: 1rem;
   }
 }
 
-body, .calculator, .input, button, .history {
+body, .calculator,.calculator1, .input, button, .history {
   transition: background 0.4s ease, color 0.4s ease;
 }
